@@ -9,4 +9,4 @@ The dataset contains information about the scholarship programs in China as of M
 
 China_Scholarship_EDA.ipynb - Exploratory Data Analysis and some conclusions from various graphs <br />
 prophet.ipynb - Predicting China Scholarship additional cost and the amount to spend on Accomodation <br />
-prophet_re.ipynb - Predicting Total Expense
+prophet_re.ipynb(Main Project model) - Predicting Total Expense

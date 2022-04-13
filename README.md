@@ -16,29 +16,42 @@ team to achieve this result. The phases include:
 [x] Deployment
 
 ### File Hierarchy
-1. (Data folder)[]: The dataset contains information about the scholarship programs in China as of May 2019.
+1. (Data folder)[https://github.com/drissdunn/Hamoye-Prophet-Team/tree/main/data]:
+The dataset contains information about the scholarship programs in China as of May 2019.
    - The data was collected by web scraping (here)[https://www.cucas.edu.cn/china_scholarships/]
    - The code to the web scraping program and data cleaning program can be accessed (here)[https://github.com/mcmuralishclint/CUCAS].
    - The file can be exported to csv format.
 
-2. (Templates Folder)[]: This folder contains the webpage scripts (HTML, CSS and JAVASRIPT).
- 
-3. (App file)[]: This file contains the flask server deployment file.
+2. (Templates Folder)[https://github.com/drissdunn/Hamoye-Prophet-Team/tree/main/templates]:
+This folder contains the webpage scripts (HTML, CSS and JAVASRIPT).
 
-4. (Model)[]: This is a serialised model file for offline batch prediction.
+3. (Process File)[]: The minimised version file of th `prophet.ipynb` containing python codes for:
+    - Data Visualisation
+    - Data Preprocessing
+    - Modeling
+    - Hyperparameter tuning
+    - Results Analysis
 
-5. (Process File)[]: The minimised version file of th `prophet.ipynb` containing python codes for:
+4. (README.md)[https://github.com/drissdunn/Hamoye-Prophet-Team/blob/main/README.md]:
+This is a summary file mostly rewritten as a documentation for all software processes.
+
+5. (App file)[https://github.com/drissdunn/Hamoye-Prophet-Team/blob/main/app.py]:
+This file contains the flask server deployment file sotored as app.py.
+
+6. (Model Pickle File)[https://github.com/drissdunn/Hamoye-Prophet-Team/blob/main/model.pkl]:
+This is a serialised model file for offline batch prediction.
+
+7. (prophet.ipynb)[https://github.com/drissdunn/Hamoye-Prophet-Team/blob/main/prophet.ipynb]: The original file containing python codes for
    - Data Visualisation
    - Data Preprocessing
    - Modeling
    - Hyperparameter tuning
    - Results Analysis
 
-6. (prophet.ipynb)[]
-   - The original file containing python codes for:
-    
-7. (Requirements File)[].txt
-    - contains all libraries and their versions, some of them includes:
+7. (Requirements File)[]: The requirements.txt file is the list of all libraries and their versions.
+    - You can import the dependencies by using "--import --name--".
+    - You can install the all this dependencies at once by running --pip/conda install requirements.txt
+    - Some of the dependencies are:
         - `pandas`
         - `numpy`
         - `matplotlib`
@@ -49,12 +62,12 @@ team to achieve this result. The phases include:
 
 ### Contributors
 Special Shoutout to the following contributors from our team
-- Dimaria
-- XYs
-- HDjf
-- Ftrud
-- Hgfih
-- bIhf[f
+- Team Lead - @drissdunn
+- First Contributor - @victoruwazurike1
+- Second Contributor - @BiniyamMelaku2
+- Thrid Contributor - @El-awwal
+- Fourth Contribuor - @oadeniran
+- Last Contributor - @chisomloius
 
 ### Notes 
 The note on this note can be improved upon, you reference the authors in your work.

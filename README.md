@@ -47,7 +47,7 @@ This is a serialised model file for offline batch prediction.
    - Data Preprocessing
    - Modeling
    - Hyperparameter tuning
-   - Results Analysis
+   - Results Analysis.
 
 7. [Requirements File](https://github.com/drissdunn/Hamoye-Prophet-Team/blob/main/requirements.txt): The requirements.txt file is the list of all libraries and their versions.
     - You can import the dependencies by using "--import --name--".

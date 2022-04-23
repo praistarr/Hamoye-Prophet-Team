@@ -26,7 +26,7 @@ def predict():
     prediction = model.predict(pd.DataFrame([features]))
     output = math.ceil(prediction[0])
 
-    return render_template('index.html', prediction_text='Predicted tuition fees to pay amount to :  {} ¥'.format(output))
+    return render_template('index.html', prediction=output)
 
 @app.route('/results',methods=['POST'])
 def results():

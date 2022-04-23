@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html >
 <head>
-  <meta charset="UTF-8">
-  <title>Prediction tuition fee of chinese scholarship</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  
+	<meta charset="UTF-8">
+	<title>Prediction tuition fee of chinese scholarship</title>
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 </head>
 
-<body style="background: #888;">
- <div class="login">
+<header class="page-header" style="text-align:center;font-size:1.8em;font-weight:bold;">
+    <a class="navbar-brand" href="../"><h3>Fees2Pay</h3></a>
+</header>
+
+<body style="background:white;">
+
+<div class="container">
+ <div class="jumbotron">
 	<h1>Predicting tuition fees to pay after Chinese Scholarship grants</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
@@ -20,7 +29,7 @@
     	<input type="text" name="university" placeholder="university" required="required" />
     
 	<section>
-		<h3>Please Select University, District and Level</h3>
+		<h5>Select University, District and Level</h5>
         	
         <label for="university">Choose university:</label>
         <select size="1" name="university" id="university">
@@ -58,7 +67,8 @@
 
         </select>
 		
-		
+		<br>
+
         <label for="level">Education level:</label>
         <select size="1" name="level" id="level">
 		    <option value="Non-Degree">Non-Degree</option>
@@ -82,8 +92,8 @@
 	
     <section>
 	    
-		<h3>Please Select program start month and year </h3>
-		<label for="start_month">`Month :`</label>
+		<h5>Select program start month and year </h5>
+		<label for="start_month">Month :</label>
 		<select size="1" name="start_month" id="start_month">
 		    <option value="Sep">September</option>
 			<option value="Feb">February</option>
@@ -93,7 +103,7 @@
 
         </select>
 		
-		<label for="start_year">` Year :</label>
+		<label for="start_year">Year :</label>
 		<select size="1" name="start_year" id="start_year">
 		    <option value=2019>2019</option>
 			<option value=2020>2020</option>
@@ -105,7 +115,7 @@
 
 	<section>
 	    
-		<h3>Please confirm accomodation and living expenses are covered </h3>
+		<h5>Confirm whether accomodation and living expenses are covered </h5>
 		<label for="living_expense_covered"> Living expense covered ?</label>
 		<select size="1" name="living_expense_covered" id="living_expense_covered">
 		    <option value=1>Yes</option>
@@ -122,7 +132,7 @@
 
 
     <br>
-        <button type="submit" class="btn btn-primary btn-block btn-large">Submit to Predict tuition fees</button>
+        <button type="submit" class="btn btn-primary">Submit to Predict tuition fees</button>
 
     </form>
 
@@ -132,10 +142,10 @@
 
    <br>
    
-    {{ prediction_text }}
+	 <h5>Predicted tuition fees to pay amount to : <span style="font-weight:bold;font-size:1.5em;">{{ prediction }}¥</span></h5>
 
  </div>
-
+</div>
 
 </body>
 </html>

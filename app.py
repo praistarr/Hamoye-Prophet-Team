@@ -1,4 +1,3 @@
-import flask
 from flask import Flask, request, jsonify, render_template
 import pickle
 import pandas as pd
@@ -6,6 +5,7 @@ import math
 
 app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
+
 
 @app.route('/')
 def home():
@@ -26,7 +26,7 @@ def predict():
     prediction = model.predict(pd.DataFrame([features]))
     output = math.ceil(prediction[0])
 
-    return render_template('index.html', prediction_text='Predicted tuition fees to pay amount to :  {} ¥'.format(output))
+    return render_template('index.html', prediction=output)
 
 @app.route('/results',methods=['POST'])
 def results():

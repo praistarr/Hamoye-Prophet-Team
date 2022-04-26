@@ -5,6 +5,7 @@
 Many student secure different types of scholarships (full, partial, tutition-free), but some students end up losing them for many other reasons. 
 Many among the reasons is that some don't know the total expenses those scholarships demand or marks reuired to sustain them. 
 The goal of this project by team Prophets is to help predict the Total Expenses for a scholarship using this dataset.
+The project was deployed on [heroku](https://predict-scholarship-fee-app.herokuapp.com/)
 
 ### Project Process
 Every machine learning project follows a workflow and phases, depending on the project specifications. Generally, these phases were followed by the 

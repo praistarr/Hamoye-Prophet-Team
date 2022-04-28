@@ -7,41 +7,13 @@
 	<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="main.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-
-	<style>
-		footer{
-			justify-content: center;
-			display: flex;
-		}
-		
-		  #aaa {
-			  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-			}
-			.login{
-				width: 600px;
-				border: 1px solid #ccc;
-				border-radius: 7px;
-				margin: auto;
-				padding: 4px;
-				display: flex;
-				justify-content: center;
-				height: 550px;
-			}
-			.aa {
-				justify-content: center;
-				text-align: center;
-			}
-			
-			.form {
-				width: 700px;
-
-			}
-	</style>
+	
 </head>
 
 <header class="page-header" style="text-align:center;font-size:1.8em;font-weight:bold;">
@@ -49,148 +21,141 @@
 	
 </header>
 
-<body style="background:white;">
+<body style="background:rgb(117, 117, 117);">
 
+	<div class="container">
 
-<div class="container">
- <div class="jumbotron login"  id = "aaa">
+ 		<div class="jumbotron login"  id = "aaa">
+			
+			<!-- Main Input For Receiving Query to our ML -->
+			<form action="{{ url_for('predict')}}"method="post" class = "form form-group">
+				<!-- <input type="text" name="university" placeholder="university" required="required"> -->
 
+				<section>
 
-     <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post" class = "form">
-    	<!-- <input type="text" name="university" placeholder="university" required="required"> -->
-
-
-
-    <div>
-	<section> <br>
-		<h5>Select University, District and Level</h5>
-        	
-        <label for="university">Choose university:</label>
-		<select size="1" name="university" id="university">
-		    <option value="Shanghai University of Traditional Chinese Medicine">Shanghai University of Traditional Chinese Medicine</option>
-			<option value="China University of Petroleum - Beijing">China University of Petroleum - Beijing</option>
-			<option value="Changchun University of Technology">Changchun University of Technology</option>
-			<option value="South China University of Technology">South China University of Technology</option>
-
-        </select><br>
-	
-
-
-        <label for="district">  District:</label>
-        <select size="1" name="district" id="district">
-		    <option value="Xuhui">Xuhui</option> <option value="Licheng">Licheng</option>
-			<option value="Changping">Changping</option> <option value="Dongguan">Dongguan</option>
-			<option value="Chaoyang">Chaoyang</option> <option value="Xihu">Xihu</option>
-			<option value="Tianhe">Tianhe</option> <option value="Haidian">Haidian</option>
-			<option value="Jiangbei ">Jiangbei </option> <option value="Xuhui">Xuhui</option>
-			<option value="Yuzhong">Yuzhong</option> <option value="Fuchen">Fuchen</option>
-			<option value="Lin'an">Lin'an</option> <option value="Wucheng">Wucheng</option>
-			<option value="Longfeng">Longfeng</option> <option value="Hexi">Hexi</option>		
-			<option value="Chaoyang">Chaoyang</option> <option value="Yangpu">Yangpu</option>
-			<option value="Nanchang">Nanchang</option> <option value="Xuzhou">Xuzhou</option>
-			<option value="Tiexi">Tiexi</option> <option value="Nanjing">Nanjing</option>
-			<option value="Zhongyuan">Zhongyuan</option> <option value="Xinbei">Xinbei</option>
-			<option value="Nankai">Nankai</option> <option value="Qingdao">Qingdao</option>
-            <option value="Zhenjiang">Zhenjiang</option> <option value="Chang'an">Chang'an</option>
-			<option value=" Fengxian"> Fengxian</option> <option value="Baoji">Baoji</option>
-            <option value="Wuhan">Wuhan</option> <option value="Jinping">Jinping</option>
-			<option value="Xicheng Qu">Xicheng Qu</option> <option value="Huanggu">Huanggu</option>
-            <option value="Shahekou">Shahekou</option>
-
-
-
-        </select>
-		
-		<br>
-
-        <label for="level">Education level:</label>
-        <select size="1" name="level" id="level">
-		    <option value="Non-Degree">Non-Degree</option>
-			<option value="Bachelor">Bachelor</option>
-			<option value="Master">Master</option>
-			<option value="Phd">Phd</option>
-
-        </select><br>
+					<h5>PROGRAM REQUIREMENT</h5>
 				
-		<label for="language">Instruction language:</label>
-		<select size="1" name="language" id="language">
-		    <option value="English">English</option>
-			<option value="Chinese">Chinese</option>
-			<option value="Japanese">Japanese</option>
-			<option value="German">German</option>
-        </select>
-
-    </section>
-	
-	<br>
-	
-    <section>
-	    
-		<h5>Select program start month and year </h5>
-		<label for="start_month">Month :</label>
-		<select size="1" name="start_month" id="start_month">
-		    <option value="Sep">September</option>
-			<option value="Feb">February</option>
-			<option value="Mar">March</option>
-			<option value="Aug">August</option>
-			<option value="Jun">June</option>
-
-        </select>
-		
-		<label for="start_year">Year :</label>
-		<select size="1" name="start_year" id="start_year">
-		    <option value=2022>2022</option>
-			<option value=2023>2023</option>
-			<option value=2024>2024</option>
-			<option value=2025>2025</option>
-	
-        </select>
-
-	</section>
-
-    <br>
-
-	<section>
-	    
-		<h5>Confirm accomodation and living expenses are covered </h5>
-		<label for="living_expense_covered"> Living expense covered ?</label>
-		<select size="1" name="living_expense_covered" id="living_expense_covered">
-		    <option value=1>Yes</option>
-			<option value=0>No</option>
-        </select>
-		
-		<label for="accomodation_covered">  Accomodation covered ?</label>
-		<select size="1" name="accomodation_covered" id="accomodation_covered">
-		    <option value=1>Yes</option>
-			<option value=0>No</option>
-        </select>
-
-	</section>
-	</div>
+					<label for="university">University:</label>
+					<select size="1" name="university" id="university">
+						<option value="Shanghai University of Traditional Chinese Medicine">Shanghai University of Traditional Chinese Medicine</option>
+						<option value="China University of Petroleum - Beijing">China University of Petroleum - Beijing</option>
+						<option value="Changchun University of Technology">Changchun University of Technology</option>
+						<option value="South China University of Technology">South China University of Technology</option>
+					</select>
+					<br>
 
 
-	<br>
-	<div class = "aa">
-        <button type="submit" class="btn btn-primary">Predict Total Fees</button>
-	</div>
-		
-		<br>
-		
-		  <h5>The Predicted Total Expense to Pay is : <span style="font-weight:bold;font-size:1.5em;">{{ prediction }}¥</span></h5>
+					<label for="district">District:</label>
+					<select size="1" name="district" id="district">
+						<option value="Xuhui">Xuhui</option> <option value="Licheng">Licheng</option>
+						<option value="Changping">Changping</option> <option value="Dongguan">Dongguan</option>
+						<option value="Chaoyang">Chaoyang</option> <option value="Xihu">Xihu</option>
+						<option value="Tianhe">Tianhe</option> <option value="Haidian">Haidian</option>
+						<option value="Jiangbei ">Jiangbei </option> <option value="Xuhui">Xuhui</option>
+						<option value="Yuzhong">Yuzhong</option> <option value="Fuchen">Fuchen</option>
+						<option value="Lin'an">Lin'an</option> <option value="Wucheng">Wucheng</option>
+						<option value="Longfeng">Longfeng</option> <option value="Hexi">Hexi</option>		
+						<option value="Chaoyang">Chaoyang</option> <option value="Yangpu">Yangpu</option>
+						<option value="Nanchang">Nanchang</option> <option value="Xuzhou">Xuzhou</option>
+						<option value="Tiexi">Tiexi</option> <option value="Nanjing">Nanjing</option>
+						<option value="Zhongyuan">Zhongyuan</option> <option value="Xinbei">Xinbei</option>
+						<option value="Nankai">Nankai</option> <option value="Qingdao">Qingdao</option>
+						<option value="Zhenjiang">Zhenjiang</option> <option value="Chang'an">Chang'an</option>
+						<option value=" Fengxian"> Fengxian</option> <option value="Baoji">Baoji</option>
+						<option value="Wuhan">Wuhan</option> <option value="Jinping">Jinping</option>
+						<option value="Xicheng Qu">Xicheng Qu</option> <option value="Huanggu">Huanggu</option>
+						<option value="Shahekou">Shahekou</option>
+					</select>
+					<br>
 
-    </form>
 
- </div>
-</div>	
-<footer>
-	<pre>
+					<label for="level">Education Level:</label>
+					<select size="1" name="level" id="level">
+						<option value="Non-Degree">Non-Degree</option>
+						<option value="Bachelor">Bachelor</option>
+						<option value="Master">Master</option>
+						<option value="Phd">Phd</option>
+					</select>
+					<br>
+					
+					<label for="language">Instruction language:</label>
+					<select size="1" name="language" id="language">
+						<option value="English">English</option>
+						<option value="Chinese">Chinese</option>
+						<option value="Japanese">Japanese</option>
+						<option value="German">German</option>
+					</select>
+
+				</section>
+				<br>
+			
+				<section>
+				
+					<h5>PREFERRED SCHEDULE</h5>
+
+					<label for="start_month">Month:</label>
+					<select size="1" name="start_month" id="start_month">
+						<option value="Sep">September</option>
+						<option value="Feb">February</option>
+						<option value="Mar">March</option>
+						<option value="Aug">August</option>
+						<option value="Jun">June</option>
+					</select>
+					<br>
+
+					<label for="start_year">Year:</label>
+					<select size="1" name="start_year" id="start_year">
+						<option value=2022>2022</option>
+						<option value=2023>2023</option>
+						<option value=2024>2024</option>
+						<option value=2025>2025</option>
+					</select>
+
+				</section>
+				<br>
 
 
+				<section>
+					
+					<h5>ACCOMODATION AND EXPENSES </h5>
 
-The goal of this project by team <strong>Prophet</strong> is to help predict the Total Expense for Chinese scholarship.
-	</pre>
-</footer>
+					<label for="living_expense_covered">Living expense covered ?</label>
+					<select size="1" name="living_expense_covered" id="living_expense_covered">
+						<option value=1>Yes</option>
+						<option value=0>No</option>
+					</select>
+					<br>
+
+					<label for="accomodation_covered">Accomodation covered ?</label>
+					<select size="1" name="accomodation_covered" id="accomodation_covered">
+						<option value=1>Yes</option>
+						<option value=0>No</option>
+					</select>
+
+				</section>
+				<br>
+
+				<div class="aa">
+					<button type="submit" class="btn btn-primary">Predict Total Fees</button> 
+					<h5>Total Expenses to Pay : <span style="font-weight:bold;font-size:1.5em;">{{ prediction }}¥</span></h5>
+				</div>
+
+    		</form>
+
+ 		</div>
+	</div>	
+	<footer>
+		<div class="card text-center">
+			<div class="card-header">
+				&#169TEAM-PROPHET
+			</div>
+			<div class="card-body">
+			  <h5 class="card-title">The goal of this project is to predict the Total Expenditure for a Chinese Scholarship.</h5>
+			  <a href="https://github.com/drissdunn/Hamoye-Prophet-Team" class="btn btn-primary">Check our Repo</a>
+			</div>
+		  </div>
+		  
+	</footer>
 
 </body>
 </html>

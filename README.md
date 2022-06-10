@@ -65,11 +65,9 @@ This is a serialised model file for offline batch prediction.
 ### Contributors
 Special Shoutout to the following contributors from our team
 - Team Lead - @praiseolawoore
+- Assitant team Lead - @Olamilekan002
 - First Contributor - @victoruwazurike1
 - Second Contributor - @BiniyamMelaku2
 - Thrid Contributor - @El-awwal
 - Fourth Contribuor - @oadeniran
 - Last Contributor - @chisomloius
-
-### Notes 
-The note on this note can be improved upon, you reference the authors in your work.
